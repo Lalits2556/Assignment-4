@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multi-step Form</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <div>
+        <div class="step active" data-step="0">
+          <div class="step-number">1</div>
+          <div>
+            <div class="step-title">STEP 1</div>
+            <div class="step-desc">YOUR INFO</div>
+          </div>
+        </div>
+        <div class="step" data-step="1">
+          <div class="step-number">2</div>
+          <div>
+            <div class="step-title">STEP 2</div>
+            <div class="step-desc">SELECT PLAN</div>
+          </div>
+        </div>
+        <div class="step" data-step="2">
+          <div class="step-number">3</div>
+          <div>
+            <div class="step-title">STEP 3</div>
+            <div class="step-desc">ADD-ONS</div>
+          </div>
+        </div>
+        <div class="step" data-step="3">
+          <div class="step-number">4</div>
+          <div>
+            <div class="step-title">STEP 4</div>
+            <div class="step-desc">SUMMARY</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-area">
+      <form id="multiStepForm">
+        <div class="form-step active">
+          <h2>Personal info</h2>
+          <p>Please provide your name, email address, and phone number.</p>
+          <label>Name</label>
+          <input type="text" placeholder="e.g. Stephen King" />
+          <label>Email Address</label>
+          <input type="email" placeholder="e.g. stephenking@lorem.com" />
+          <label>Phone Number</label>
+          <input type="tel" placeholder="e.g. +1 234 567 890" />
+        </div>
+
+        <div class="form-step">
+          <h2>Select Plan</h2>
+          <p>Choose your subscription plan.</p>
+          <input type="radio" name="plan" id="basic"> Basic<br>
+          <input type="radio" name="plan" id="pro"> Pro<br>
+        </div>
+
+        <div class="form-step">
+          <h2>Add-ons</h2>
+          <p>Select additional services.</p>
+          <input type="checkbox" id="addon1"> Extra Storage<br>
+          <input type="checkbox" id="addon2"> Custom Themes<br>
+        </div>
+
+        <div class="form-step">
+          <h2>Summary</h2>
+          <p>Review and confirm your choices.</p>
+          <p>(Summary content here...)</p>
+        </div>
+
+        <div class="nav-buttons">
+          <button type="button" id="prevBtn">Previous</button>
+          <button type="button" id="nextBtn">Next</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
